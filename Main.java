@@ -14,22 +14,23 @@ public class Main
     int maxC = 0;
     String mode = "";
 
-    for (int i = 0; i < word.length(); i++)
+    for (int i = 0; i < word.length(); i++) // for each letter in word
     {
-      String target = word.substring(i, i+1);
+      String target = word.substring(i, i+1); // get the letter
       int count = 0;
       
 
-      for (int j = 0; j < word.length(); j++)
+      for (int j = 0; j < word.length(); j++) //look at whole word for letter
       {
-        String currentLetter = word.substring(j, j+1);
+        String currentLetter = word.substring(j, j+1); // get current letter
         if (currentLetter.equals(target))
         {
             count++;
         }
+        //then repeat
       }
 
-      if(count > maxC)
+      if(count > maxC) //if count of the current letter is larger than current max letter count
       {
         maxC = count;
         mode = target;
